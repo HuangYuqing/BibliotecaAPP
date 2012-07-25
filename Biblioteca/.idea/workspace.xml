@@ -58,13 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Login.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Login.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Options/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="106" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.96348315">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="44" column="106" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,20 +71,16 @@
         <entry file="file://$PROJECT_DIR$/src/Options/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="5" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyLibrary.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyLibrary.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="12" column="26" selection-start="250" selection-end="250" vertical-scroll-proportion="0.27027026">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,11 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/Util/Options.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="65" column="27" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Options#0" expanded="false" />
-                <element signature="e#359#367#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,9 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/Options/CheckLibraryNum.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="21" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,9 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/Options/ListAllBooks.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="8" selection-start="391" selection-end="409" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,9 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/Options/ListAllMovie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="8" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,9 +143,7 @@
         <entry file="file://$PROJECT_DIR$/src/Options/ReserveBook.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="51" column="42" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -276,46 +258,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Biblioteca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Biblioteca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Biblioteca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Biblioteca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -592,6 +551,7 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="80d16843-a3f4-4381-967f-5d8432114cf2" name="Default" comment="" />
       <created>1342885783910</created>
       <updated>1342885783910</updated>
     </task>
@@ -619,28 +579,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="725" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39900663" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22771475" sideWeight="0.21854305" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22771475" sideWeight="0.6705298" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294702" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22609401" sideWeight="0.6721854" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -704,138 +664,84 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Util/MovieStoreBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#429#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="42" column="0" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="33" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="50" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/UserList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="37" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/UserListBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#512#518#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="16" column="27" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Options/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="20" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/ReserveBook.java">
+    <entry file="file://$PROJECT_DIR$/src/Options/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="44" column="106" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/ListAllMovie.java">
+    <entry file="file://$PROJECT_DIR$/src/Options/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="8" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="17" column="5" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/ListAllBooks.java">
+    <entry file="file://$PROJECT_DIR$/src/MyLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="391" selection-end="409" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/DisplayWelcome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Parameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+        <state line="12" column="26" selection-start="250" selection-end="250" vertical-scroll-proportion="0.27027026">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Options.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="27" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Options#0" expanded="false" />
-            <element signature="e#359#367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/LoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="5" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="65" column="27" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Options/CheckLibraryNum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="21" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Options/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/Util/Parameters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="106" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.96348315">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="13" column="33" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Options/DisplayWelcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="26" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Options/ListAllBooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="391" selection-end="409" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Options/ListAllMovie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Options/ReserveBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="42" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
   </component>

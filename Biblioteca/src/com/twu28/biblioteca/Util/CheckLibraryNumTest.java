@@ -26,6 +26,9 @@ public class CheckLibraryNumTest {
 
         Assert.assertEquals("111-1112", checkResult);
 
+        Parameters.loginFlag = false;
+        Parameters.loginUser = null;
+
     }
 
     @Test

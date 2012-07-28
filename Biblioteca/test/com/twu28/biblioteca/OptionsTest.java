@@ -42,7 +42,11 @@ public class OptionsTest {
     //How to test : "A customer should be able to select a menu option."
 
     @Test
-    public void testSelectOption() throws Exception {
+    public void testSelectListAllBooksOption() throws Exception {
+        int optionNum = 1;
 
+        options.chooseOption(optionNum);
+
+        //这个是要按ListAllBooksTest里面的Assert吗？或者说只要确认能够选择这个Option?
     }
 }

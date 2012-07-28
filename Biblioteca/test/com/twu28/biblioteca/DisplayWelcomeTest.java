@@ -4,18 +4,25 @@ import com.twu28.biblioteca.Options.DisplayWelcome;
 import junit.framework.Assert;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 9:27 AM
- * To change this template use File | Settings | File Templates.
  */
 public class DisplayWelcomeTest {
 
     @Test
     public void testDoOption() throws Exception {
-        String result = new DisplayWelcome().GetPrologue();
-        Assert.assertEquals("Welcome", result);
+        ByteArrayOutputStream outPutStream = new ByteArrayOutputStream();
+        PrintStream out = new PrintStream(outPutStream);
+        System.setOut(out);
+
+        new DisplayWelcome().doOption();
+        Assert.assertEquals("Welcome\n", new String(outPutStream.toByteArray()));
     }
 }

@@ -2,15 +2,14 @@ package com.twu28.biblioteca.Models;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 9:19 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Movie {
-    public String movieName;
-    public String movieDirector;
-    public String movieRating;
+    String movieName;
+    String movieDirector;
+    String movieRating;
 
     public Movie(String movieName, String movieDirector, String movieRating) {
 
@@ -18,5 +17,17 @@ public class Movie {
         this.movieDirector = movieDirector;
         this.movieRating = movieRating;
 
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public String getMovieDirector() {
+        return movieDirector;
+    }
+
+    public String getMovieRating() {
+        return movieRating;
     }
 }

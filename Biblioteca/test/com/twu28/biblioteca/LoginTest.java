@@ -1,36 +1,52 @@
 package com.twu28.biblioteca;
 
-import com.twu28.biblioteca.Models.User;
 import com.twu28.biblioteca.Options.Login;
-import com.twu28.biblioteca.Util.Parameters;
 import junit.framework.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 11:24 PM
- * To change this template use File | Settings | File Templates.
  */
 public class LoginTest {
-    @Test
-    public void testDoOptionWithNonexistUser() throws Exception {
-        User user = new User("111-2222", "password", "User");
-        Login login = new Login();
-        login.setUser(user);
+    ByteArrayOutputStream outPutStream;
+    ByteArrayInputStream in;
+    PrintStream out;
 
-        login.DoOption();
-        Assert.assertEquals(false, Parameters.loginFlag);
+    @Before
+    public void setUp() throws Exception {
+        outPutStream = new ByteArrayOutputStream();
+        out = new PrintStream(outPutStream);
+        System.setOut(out);
     }
 
     @Test
-    public void testDoOptionWithExistUser() throws Exception {
-        User user = new User("111-1112", "password#2", "User");
-        Login login = new Login();
-        login.setUser(user);
+    public void shouldNotLoginWithNonexistUser() throws Exception {
 
-        login.DoOption();
-        Assert.assertEquals(true, Parameters.loginFlag);
+        Login login = new Login();
+        in = new ByteArrayInputStream("111-2222 password#1".getBytes());
+        System.setIn(in);
+
+        login.doOption();
+
+        Assert.assertEquals("Please login\ninput your username: \ninput your password: \nLogin fail\n", new String(outPutStream.toByteArray()));
+    }
+
+    @Test
+    public void shouldLoginWithExistUser() throws Exception {
+        Login login = new Login();
+        in = new ByteArrayInputStream("111-1111 password#1".getBytes());
+        System.setIn(in);
+
+        login.doOption();
+
+        Assert.assertEquals("Please login\ninput your username: \ninput your password: \nLogin success\n", new String(outPutStream.toByteArray()));
     }
 }

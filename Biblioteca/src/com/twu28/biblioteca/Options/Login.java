@@ -2,7 +2,6 @@ package com.twu28.biblioteca.Options;
 
 import com.twu28.biblioteca.Models.User;
 import com.twu28.biblioteca.Util.Messages;
-import com.twu28.biblioteca.Util.Parameters;
 import com.twu28.biblioteca.Util.UserListBuilder;
 import com.twu28.biblioteca.Util.Utils;
 
@@ -11,53 +10,47 @@ import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 11:23 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Login extends Option {
-    User user = new User("N/A", "N/A", "User");
 
     public Login(){
         optionName = "Login";
+        user = new User();
     }
 
-    public void setUser(User userToSet) {
-        user = userToSet;
-    }
+    public void doOption(){
 
-    public void DoOption(){
-        if(user.userName == "N/A"){
-            InputUserInfo();
-        }
-       if(ValidateUserInfo(user)){
-           Utils.DisplayInfo(Messages.LoginSuc);
-           Parameters.loginFlag = true;
-           Parameters.loginUser = user;
+       inputUserInfo();
+
+       if(validateUserInfo() != null){
+           Utils.displayInfo(Messages.LoginSuc);
+           user = validateUserInfo();
+
         }else {
-           Utils.DisplayInfo(Messages.LoginFail);
+           Utils.displayInfo(Messages.LoginFail);
        }
     }
 
-    private void InputUserInfo() {
-        Utils.DisplayInfo("Please login");
+    private void inputUserInfo() {
+        Utils.displayInfo("Please login");
         Scanner input = new Scanner(System.in);
 
-        Utils.DisplayInfo("input your username: ");
+        Utils.displayInfo("input your username: ");
         user.userName = input.next();
-
-        Utils.DisplayInfo("input your password: ");
+        Utils.displayInfo("input your password: ");
         user.userPassword = input.next();
     }
 
-    private boolean ValidateUserInfo(User loginUser) {
+    public User validateUserInfo() {
         List<User> users = UserListBuilder.TempUserList().getUserList();
         for (User user : users){
-            if(user.userName.equals(loginUser.userName) && user.userPassword.equals(loginUser.userPassword)) {
-                return true;
+            if(user.userName.equals(this.user.userName) && user.userPassword.equals(this.user.userPassword)) {
+                return user;
             }
         }
-        return false;
+        return null;
     }
 }

@@ -1,26 +1,25 @@
 package com.twu28.biblioteca;
 
 import com.twu28.biblioteca.Options.DisplayWelcome;
-import com.twu28.biblioteca.Util.Options;
+import com.twu28.biblioteca.Options.Options;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 6:07 PM
- * To change this template use File | Settings | File Templates.
  */
 public class MyLibrary {
 
 
-    public static void WorkFlowOfOptions(){
+    public static void workFlowOfOptions(){
         Options options = new Options();
-        options.ListOption();
-        int optionNum = options.InputChoose();
+        options.listOption();
+        int optionNum = options.inputChoose();
         options.validateChoose(optionNum);
     }
     public static void main(String args[]){
-        new DisplayWelcome().DoOption();
-        WorkFlowOfOptions();
+        new DisplayWelcome().doOption();
+        workFlowOfOptions();
     }
 }

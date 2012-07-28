@@ -4,10 +4,9 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 9:27 PM
- * To change this template use File | Settings | File Templates.
  */
 public class MovieStore {
     List<Movie> movies;

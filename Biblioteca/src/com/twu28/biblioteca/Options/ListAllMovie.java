@@ -2,34 +2,36 @@ package com.twu28.biblioteca.Options;
 
 
 import com.twu28.biblioteca.Models.Movie;
-import com.twu28.biblioteca.Models.MovieStore;
-import com.twu28.biblioteca.Util.MovieStoreBuilder;
 import com.twu28.biblioteca.Util.Utils;
 
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: twer
+ * User: Yuqing
  * Date: 7/22/12
  * Time: 10:13 PM
- * To change this template use File | Settings | File Templates.
  */
 public class ListAllMovie extends Option{
-    MovieStore movieStore;
+    List<Movie> movieList;
 
     public ListAllMovie(){
         optionName = "List all movies";
         needLogin = false;
-        movieStore = MovieStoreBuilder.TempMovieStore();
     }
 
-    public void DoOption(){
-        for(Movie movie : GetMovieList()){
-            Utils.DisplayInfo(movie.movieName + "  " + movie.movieDirector + "  " + movie.movieRating);
+    public ListAllMovie(List<Movie> movieList) {
+        optionName = "List all movies";
+        needLogin = false;
+        this.movieList = movieList;
+    }
+
+    public void doOption(){
+        for(Movie movie : getMovieList()){
+            Utils.displayInfo(movie.getMovieName() + "  " + movie.getMovieDirector() + "  " + movie.getMovieRating());
         }
     }
-    public List<Movie> GetMovieList(){
-        return movieStore.getMovies();
+    public List<Movie> getMovieList(){
+        return movieList;
     }
 }

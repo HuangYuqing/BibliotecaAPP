@@ -4,13 +4,12 @@ import com.twu28.biblioteca.Models.Book;
 import com.twu28.biblioteca.Models.BookStore;
 import com.twu28.biblioteca.Options.ReserveBook;
 import com.twu28.biblioteca.Repositories.IBookListGenerator;
+import com.twu28.biblioteca.Util.UserInteraction;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.Arrays;
 
 import static org.mockito.Mockito.mock;
@@ -27,10 +26,7 @@ public class ReserveBookTest {
     IBookListGenerator mockedBookList;
     ReserveBook reserve;
 
-    ByteArrayOutputStream outPutStream;
-    ByteArrayInputStream in;
-    PrintStream out;
-    //how to test without actual data??? bookList??
+    ByteArrayOutputStream outPutStr;
 
     @Before
     public void setUp() throws Exception {
@@ -40,9 +36,7 @@ public class ReserveBookTest {
 
         reserve = new ReserveBook(mockedBookList.generator());
 
-        outPutStream = new ByteArrayOutputStream();
-        out = new PrintStream(outPutStream);
-        System.setOut(out);
+        outPutStr = new UserInteraction().userOutput();
     }
 
     //decouple test and actual data --- mock data
@@ -50,8 +44,7 @@ public class ReserveBookTest {
     public void testReserveBookWhenBookCanBeReserved() throws Exception {
         int count;
 
-        in = new ByteArrayInputStream("bookA".getBytes());
-        System.setIn(in);
+        new UserInteraction().userInput("bookA");
 
         count = new BookStore(mockedBookList.generator()).getBook("bookA").getBookMaxBLNum();
 
@@ -60,18 +53,16 @@ public class ReserveBookTest {
 
         Assert.assertEquals(count, new BookStore(mockedBookList.generator()).getBook("bookA").getBookMaxBLNum());
 
-        Assert.assertEquals("Thank You! Enjoy the book.\n", new String(outPutStream.toByteArray()));
+        Assert.assertEquals("Thank You! Enjoy the book.\n", outPutStr.toString());
 
     }
     @Test
     public void testReserveBookWhenBookCannotBeReserved() throws Exception {
 
-        in = new ByteArrayInputStream("bookC".getBytes());
-        System.setIn(in);
+        new UserInteraction().userInput("bookC");
 
         reserve.doOption();
-        Assert.assertEquals("Sorry we don't have that book yet.\n", new String(outPutStream.toByteArray()));
-
+        Assert.assertEquals("Sorry we don't have that book yet.\n", outPutStr.toString());
 
     }
 }

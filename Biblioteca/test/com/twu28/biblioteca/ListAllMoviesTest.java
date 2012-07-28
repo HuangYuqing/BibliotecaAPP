@@ -23,7 +23,6 @@ public class ListAllMoviesTest {
 
     private IMovieListGenerator mockedMovieList;
 
-    //how to test without actual data??? movieList??
     @Before
     public void setUp() throws Exception {
 

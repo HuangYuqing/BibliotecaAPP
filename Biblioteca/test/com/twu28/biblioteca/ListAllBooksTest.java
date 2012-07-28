@@ -22,7 +22,6 @@ import static org.mockito.Mockito.when;
 public class ListAllBooksTest {
 
     IBookListGenerator mockedBookList;
-    //how to test without actual data??? bookList??
 
     @Before
     public void setUp() throws Exception {

@@ -1,11 +1,11 @@
 package com.twu28.biblioteca;
 
 import com.twu28.biblioteca.Options.DisplayWelcome;
+import com.twu28.biblioteca.Util.UserInteraction;
 import junit.framework.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 
 /**
@@ -18,11 +18,8 @@ public class DisplayWelcomeTest {
 
     @Test
     public void testDoOption() throws Exception {
-        ByteArrayOutputStream outPutStream = new ByteArrayOutputStream();
-        PrintStream out = new PrintStream(outPutStream);
-        System.setOut(out);
-
+        ByteArrayOutputStream outPutStr = new UserInteraction().userOutput();
         new DisplayWelcome().doOption();
-        Assert.assertEquals("Welcome\n", new String(outPutStream.toByteArray()));
+        Assert.assertEquals("Welcome\n", outPutStr.toString());
     }
 }

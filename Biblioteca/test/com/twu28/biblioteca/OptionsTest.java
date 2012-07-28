@@ -1,11 +1,12 @@
 package com.twu28.biblioteca;
 
 import com.twu28.biblioteca.Options.Options;
+import com.twu28.biblioteca.Util.UserInteraction;
 import junit.framework.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,30 +16,33 @@ import java.io.PrintStream;
  */
 public class OptionsTest {
     Options options = new Options();
+    ByteArrayOutputStream outPutStream;
+
+    @Before
+    public void setUp() throws Exception {
+        outPutStream = new UserInteraction().userOutput();
+    }
 
     @Test()
     public void testListOption() throws Exception {
-        ByteArrayOutputStream outPutStream = new ByteArrayOutputStream();
-        PrintStream out = new PrintStream(outPutStream);
-        System.setOut(out);
-
         options.listOption();
 
         String expected =   "1. Check library num\n2. List all books\n3. Reserve a book\n4. List all movies\n";
-        Assert.assertEquals(expected, new String(outPutStream.toByteArray()));
+        Assert.assertEquals(expected, outPutStream.toString());
     }
 
     @Test()
     public void testInvalidInputChoose() throws Exception {
         int optionNum = 6;
-        ByteArrayOutputStream outPutStream = new ByteArrayOutputStream();
-        PrintStream out = new PrintStream(outPutStream);
-        System.setOut(out);
-
         options.validateChoose(optionNum);
 
-        Assert.assertEquals("Select a valid option!!\n", new String(outPutStream.toByteArray()));
+        Assert.assertEquals("Select a valid option!!\n", outPutStream.toString());
     }
 
     //How to test : "A customer should be able to select a menu option."
+
+    @Test
+    public void testSelectOption() throws Exception {
+
+    }
 }

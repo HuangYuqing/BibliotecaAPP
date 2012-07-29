@@ -3,10 +3,9 @@ package com.twu28.biblioteca.Options;
 import com.twu28.biblioteca.Models.Book;
 import com.twu28.biblioteca.Models.BookStore;
 import com.twu28.biblioteca.Util.Messages;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,21 +25,16 @@ public class ReserveBook extends Option {
         bookStore = new BookStore(bookList);
     }
 
-    public void InputBookName(){
-        Scanner input = new Scanner(System.in);
-        bookToReserve = input.next();
-    }
-
     public void doOption(){
-        InputBookName();
+        bookToReserve = new UserInteraction().input();
 
         if(bookCanBeReserved(bookToReserve) != null){
             Book book = bookStore.getBook(bookToReserve);
             int bookCount = book.getBookMaxBLNum();
             book.setBookMaxBLNum(--bookCount);
-            Utils.displayInfo(Messages.ReserveSuc);
+            new UserInteraction().output(Messages.ReserveSuc);
         }   else {
-            Utils.displayInfo(Messages.ReserveFail);
+            new UserInteraction().output(Messages.ReserveFail);
         }
     }
 

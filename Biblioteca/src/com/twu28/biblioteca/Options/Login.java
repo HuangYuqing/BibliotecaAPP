@@ -2,11 +2,10 @@ package com.twu28.biblioteca.Options;
 
 import com.twu28.biblioteca.Models.User;
 import com.twu28.biblioteca.Util.Messages;
+import com.twu28.biblioteca.Util.UserInteraction;
 import com.twu28.biblioteca.Util.UserListBuilder;
-import com.twu28.biblioteca.Util.Utils;
 
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,22 +25,21 @@ public class Login extends Option {
        inputUserInfo();
 
        if(validateUserInfo() != null){
-           Utils.displayInfo(Messages.LoginSuc);
+           new UserInteraction().output(Messages.LoginSuc);
            user = validateUserInfo();
 
         }else {
-           Utils.displayInfo(Messages.LoginFail);
+           new UserInteraction().output(Messages.LoginFail);
        }
     }
 
     private void inputUserInfo() {
-        Utils.displayInfo("Please login");
-        Scanner input = new Scanner(System.in);
+        new UserInteraction().output("Please login");
 
-        Utils.displayInfo("input your username: ");
-        user.userName = input.next();
-        Utils.displayInfo("input your password: ");
-        user.userPassword = input.next();
+        new UserInteraction().output("input your username: ");
+        user.userName = new UserInteraction().input();
+        new UserInteraction().output("input your password: ");
+        user.userPassword = new UserInteraction().input();
     }
 
     public User validateUserInfo() {

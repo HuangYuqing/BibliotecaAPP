@@ -2,7 +2,7 @@ package com.twu28.biblioteca.Options;
 
 
 import com.twu28.biblioteca.Util.Messages;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,6 +18,6 @@ public class DisplayWelcome extends Option {
     }
 
     public void doOption(){
-        Utils.displayInfo(Messages.PROLOGUE);
+        new UserInteraction().output(Messages.PROLOGUE);
     }
 }

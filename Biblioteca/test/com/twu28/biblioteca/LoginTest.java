@@ -25,7 +25,7 @@ public class LoginTest {
     @Test
     public void shouldNotLoginWithNonexistUser() throws Exception {
 
-        new UserInteraction().userInput("111-2222 password#1");
+        new UserInteraction().userInput("111-2222\npassword#1\n");
 
         Login login = new Login();
         login.doOption();
@@ -36,7 +36,7 @@ public class LoginTest {
     @Test
     public void shouldLoginWithExistUser() throws Exception {
 
-        new UserInteraction().userInput("111-1111 password#1");
+        new UserInteraction().userInput("111-1111\npassword#1\n");
 
         Login login = new Login();
         login.doOption();

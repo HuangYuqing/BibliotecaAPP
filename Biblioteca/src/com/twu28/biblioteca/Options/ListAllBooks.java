@@ -2,7 +2,7 @@ package com.twu28.biblioteca.Options;
 
 
 import com.twu28.biblioteca.Models.Book;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 import java.util.List;
 
@@ -27,9 +27,9 @@ public class ListAllBooks extends Option {
 
     public void doOption()
     {
-        Utils.displayInfo("All the books:");
+        new UserInteraction().output("All the books:");
         for(Book book : bookList){
-            Utils.displayInfo(book.getBookName());
+            new UserInteraction().output(book.getBookName());
         }
     }
 

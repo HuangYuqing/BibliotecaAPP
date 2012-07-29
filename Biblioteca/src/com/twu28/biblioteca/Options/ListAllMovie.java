@@ -2,7 +2,7 @@ package com.twu28.biblioteca.Options;
 
 
 import com.twu28.biblioteca.Models.Movie;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class ListAllMovie extends Option{
 
     public void doOption(){
         for(Movie movie : getMovieList()){
-            Utils.displayInfo(movie.getMovieName() + "  " + movie.getMovieDirector() + "  " + movie.getMovieRating());
+            new UserInteraction().output(movie.getMovieName() + "  " + movie.getMovieDirector() + "  " + movie.getMovieRating());
         }
     }
     public List<Movie> getMovieList(){

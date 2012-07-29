@@ -2,7 +2,7 @@ package com.twu28.biblioteca.Options;
 
 import com.twu28.biblioteca.Models.User;
 import com.twu28.biblioteca.Util.Messages;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,9 +24,9 @@ public class CheckLibraryNum extends Option {
 
     public void doOption(){
         if(haveLogged){
-            Utils.displayInfo(user.userName);
+            new UserInteraction().output(user.userName);
         }else{
-            Utils.displayInfo(Messages.CheckLibraryNum);
+            new UserInteraction().output(Messages.CheckLibraryNum);
         }
     }
 }

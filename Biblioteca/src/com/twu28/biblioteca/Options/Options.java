@@ -1,11 +1,10 @@
 package com.twu28.biblioteca.Options;
 
 import com.twu28.biblioteca.Util.Messages;
-import com.twu28.biblioteca.Util.Utils;
+import com.twu28.biblioteca.Util.UserInteraction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,24 +32,23 @@ public class Options {
         int i = 0;
         for (Object option : optionList.toArray()) {
             i ++;
-            Utils.displayInfo(i + ". " + ((Option) option).optionName);
+            new UserInteraction().output(i + ". " + ((Option) option).optionName);
         }
     }
 
 
     public int inputChoose() {
-        Utils.displayInfo("Input your choose: ");
+        new UserInteraction().output("Input your choose: ");
         int optionNum;
 
-        Scanner input = new Scanner(System.in);
-        optionNum = input.nextInt();
+        optionNum = Integer.parseInt(new UserInteraction().input());
 
         return optionNum;
     }
 
     public void validateChoose(int optionNum){
         if (optionNum < 1 || optionNum > optionList.size()){
-            Utils.displayInfo(Messages.InvalidChoose);
+            new UserInteraction().output(Messages.InvalidChoose);
         }else {
             chooseOption(optionNum);
         }

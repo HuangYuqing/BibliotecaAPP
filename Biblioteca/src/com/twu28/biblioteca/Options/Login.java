@@ -24,15 +24,18 @@ public class Login extends Option {
 
     public void doOption(){
 
-       inputUserInfo();
+        inputUserInfo();
+        loginResult();
+    }
 
-       if(validateUserInfo() != null){
-           userInteraction.output(Messages.LoginSuc);
-           user = validateUserInfo();
+    public void loginResult() {
+        if(validateUserInfo() != null){
+            userInteraction.output(Messages.LoginSuc);
+            user = validateUserInfo();
 
-        }else {
-           userInteraction.output(Messages.LoginFail);
-       }
+         }else {
+            userInteraction.output(Messages.LoginFail);
+        }
     }
 
     private void inputUserInfo() {
@@ -44,7 +47,7 @@ public class Login extends Option {
         user.userPassword = userInteraction.input();
     }
 
-    public User validateUserInfo() {
+    private User validateUserInfo() {
         List<User> users = UserListBuilder.TempUserList().getUserList();
         for (User user : users){
             if(user.userName.equals(this.user.userName) && user.userPassword.equals(this.user.userPassword)) {

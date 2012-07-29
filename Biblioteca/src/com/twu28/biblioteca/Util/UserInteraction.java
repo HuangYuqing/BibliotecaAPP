@@ -1,5 +1,7 @@
 package com.twu28.biblioteca.Util;
 
+import com.twu28.biblioteca.Models.User;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -37,5 +39,9 @@ public class UserInteraction {
 
     public void output(String info){
         System.out.println(info);
+    }
+
+    public User input2() {
+        return null;  //To change body of created methods use File | Settings | File Templates.
     }
 }

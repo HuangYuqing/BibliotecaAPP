@@ -1,12 +1,17 @@
 package com.twu28.biblioteca;
 
+import com.twu28.biblioteca.Models.User;
 import com.twu28.biblioteca.Options.Login;
+import com.twu28.biblioteca.Repositories.IBookListGenerator;
 import com.twu28.biblioteca.Util.UserInteraction;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,28 +26,31 @@ public class LoginTest {
     @Before
     public void setUp() throws Exception {
         outPutStr = new UserInteraction().userOutput();
-        userInteraction = new UserInteraction();
+        userInteraction = mock(UserInteraction.class);
     }
 
     @Test
     public void shouldNotLoginWithNonexistUser() throws Exception {
 
-        userInteraction.userInput("111-2222\npassword#1\n");
+        //userInteraction.userInput("111-2222\npassword#1\n");
+        when(userInteraction.input2()).thenReturn((new User("111-2222","password#1","")));
 
         Login login = new Login();
-        login.doOption();
+        login.setUser(userInteraction.input2());
+        login.loginResult();
 
-        Assert.assertEquals("Please login\ninput your username: \ninput your password: \nLogin fail\n", outPutStr.toString());
+        Assert.assertEquals("Login fail\n", outPutStr.toString());
     }
 
     @Test
     public void shouldLoginWithExistUser() throws Exception {
 
-        userInteraction.userInput("111-1111\npassword#1\n");
+        when(userInteraction.input2()).thenReturn((new User("111-1111","password#1","")));
 
         Login login = new Login();
-        login.doOption();
+        login.setUser(userInteraction.input2());
+        login.loginResult();
 
-        Assert.assertEquals("Please login\ninput your username: \ninput your password: \nLogin success\n", outPutStr.toString());
+        Assert.assertEquals("Login success\n", outPutStr.toString());
     }
 }

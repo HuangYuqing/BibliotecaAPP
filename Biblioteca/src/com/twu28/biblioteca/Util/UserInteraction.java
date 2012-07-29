@@ -12,6 +12,12 @@ import java.util.Scanner;
  * Time: 10:49 PM
  */
 public class UserInteraction {
+    Scanner input ;
+
+    public UserInteraction() {
+        this.input = new Scanner(System.in);
+    }
+
     public void userInput(String inputStr){
         ByteArrayInputStream in = new ByteArrayInputStream(inputStr.getBytes());
         System.setIn(in);
@@ -25,7 +31,7 @@ public class UserInteraction {
     }
 
     public String input(){
-        Scanner input = new Scanner(System.in);
+
         return input.nextLine();
     }
 

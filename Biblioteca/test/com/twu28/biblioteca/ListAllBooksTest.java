@@ -33,7 +33,6 @@ public class ListAllBooksTest {
     @Test
     public void shouldListAllBooks() throws Exception {
         ListAllBooks option = new ListAllBooks(mockedBookList.generator());
-        option.doOption();
 
         Assert.assertEquals("bookA",option.getBookList().get(0).getBookName());
 

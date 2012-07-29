@@ -15,9 +15,11 @@ import java.util.List;
  */
 public class Login extends Option {
 
+    UserInteraction userInteraction;
     public Login(){
         optionName = "Login";
         user = new User();
+        userInteraction = new UserInteraction();
     }
 
     public void doOption(){
@@ -25,21 +27,21 @@ public class Login extends Option {
        inputUserInfo();
 
        if(validateUserInfo() != null){
-           new UserInteraction().output(Messages.LoginSuc);
+           userInteraction.output(Messages.LoginSuc);
            user = validateUserInfo();
 
         }else {
-           new UserInteraction().output(Messages.LoginFail);
+           userInteraction.output(Messages.LoginFail);
        }
     }
 
     private void inputUserInfo() {
-        new UserInteraction().output("Please login");
+        userInteraction.output("Please login");
 
-        new UserInteraction().output("input your username: ");
-        user.userName = new UserInteraction().input();
-        new UserInteraction().output("input your password: ");
-        user.userPassword = new UserInteraction().input();
+        userInteraction.output("input your username: ");
+        user.userName = userInteraction.input();
+        userInteraction.output("input your password: ");
+        user.userPassword = userInteraction.input();
     }
 
     public User validateUserInfo() {

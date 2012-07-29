@@ -1,12 +1,20 @@
 package com.twu28.biblioteca;
 
+import com.twu28.biblioteca.Models.Book;
+import com.twu28.biblioteca.Options.ListAllBooks;
+import com.twu28.biblioteca.Options.Option;
 import com.twu28.biblioteca.Options.Options;
+import com.twu28.biblioteca.Repositories.IBookListGenerator;
 import com.twu28.biblioteca.Util.UserInteraction;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Arrays;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,11 +50,18 @@ public class OptionsTest {
     //How to test : "A customer should be able to select a menu option."
 
     @Test
-    public void testSelectListAllBooksOption() throws Exception {
-        int optionNum = 1;
+    public void testSelectOption() throws Exception {
 
-        options.chooseOption(optionNum);
+        Option option = options.chooseOption(1);
+        Assert.assertEquals("Check library num", option.optionName);
 
-        //这个是要按ListAllBooksTest里面的Assert吗？或者说只要确认能够选择这个Option?
+        option = options.chooseOption(2);
+        Assert.assertEquals("List all books", option.optionName);
+
+        option = options.chooseOption(3);
+        Assert.assertEquals("Reserve a book", option.optionName);
+
+        option = options.chooseOption(4);
+        Assert.assertEquals("List all movies", option.optionName);
     }
 }

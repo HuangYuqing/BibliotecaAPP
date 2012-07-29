@@ -15,6 +15,7 @@ public class CheckLibraryNum extends Option {
     public CheckLibraryNum(){
         optionName = "Check library num";
         needLogin = true;
+        haveLogged = false;
     }
 
     public CheckLibraryNum(boolean haveLagged, User user) {

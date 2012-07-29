@@ -54,20 +54,7 @@ public class Options {
         }
     }
 
-    public String chooseOption(int optionNum){
-        Option option = optionList.get(optionNum - 1);
-        if(!option.needLogin){
-            option.doOption();
-        }else {
-            Login login = new Login();
-            login.doOption();
-            if(login.getUser() != null){
-                option.haveLogged = true;
-                option.setUser(login.user);
-                option.doOption();
-            }
-
-        }
-        return option.optionName;
+    public Option chooseOption(int optionNum){
+        return optionList.get(optionNum - 1);
     }
 }
